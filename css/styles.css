@@ -1,0 +1,48 @@
+/* Sayfa genel ayarları */
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+  font-family: sans-serif;
+}
+
+/* Galeri ana konteyneri - 3 Sütunlu Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+  gap: 15px; /* Resimler arası boşluk */
+  padding: 24px;
+  list-style: none;
+  max-width: 1140px;
+  margin: 0 auto; /* Ortalar */
+}
+
+/* Her bir liste elemanı */
+.gallery-item {
+  display: flex; /* İçeriği esnek kutu yapar */
+}
+
+/* Resimlerin stili */
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover efekti */
+.gallery-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal içindeki resim */
+.basicLightbox img {
+  border-radius: 4px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
